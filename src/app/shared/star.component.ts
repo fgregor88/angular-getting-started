@@ -1,12 +1,12 @@
-import { Component, OnChanges, SimpleChanges } from "@angular/core";
+import { Component, Input, OnChanges } from "@angular/core";
 
 @Component({
     selector: 'pm-star',
     templateUrl: './star.component.html',
-    styleUrls: ['.star.component.css']
+    styleUrls: ['./star.component.css']
 })
 export class StarComponent implements OnChanges{
-    rating: number = 4;
+    @Input() rating: number = 0;
     cropWidth: number = 75;
 
     ngOnChanges(): void {
