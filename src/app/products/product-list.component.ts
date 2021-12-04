@@ -80,7 +80,7 @@ export class ProductListComponent implements OnInit{
 
   performFilter(filterBy: string): IProduct[]{
     filterBy = filterBy.toLocaleLowerCase();
-    return this.products.filter((product: IProduct) => 
+    return this.products.filter((product: IProduct) =>
     product.productName.toLocaleLowerCase().includes(filterBy));
   }
 
@@ -94,5 +94,9 @@ export class ProductListComponent implements OnInit{
 
   onRatingClicked(message: string): void{
     this.pageTitle = 'Product List:' + message;
+  }
+
+  clearFilter() {
+    this.listFilter = "";
   }
 }
