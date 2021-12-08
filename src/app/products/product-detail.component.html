@@ -1,5 +1,8 @@
 <div class="card">
   <div class="card-header">
-    {{pageTitle}}
+    {{pageTitle + ': ' + product?.productName}}
+  </div>
+  <div *ngIf="product">
+    Nothing to see here if product is null. {{product.productName}}.
   </div>
 </div>
